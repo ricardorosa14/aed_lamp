@@ -7,3 +7,6 @@ class Lamp:
 
     def set_on(self):
         self.state = True
+
+    def set_off(self):
+        self.state = False
