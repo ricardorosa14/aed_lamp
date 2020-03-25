@@ -10,7 +10,7 @@ if __name__ == "__main__":
         
         if line == "ON":
             # Liga a lampada
-            controller.on()
+            controller.set_on()
             print("Lamp status set to ON.")
         if line == "OFF":
             # Desliga a lampada
