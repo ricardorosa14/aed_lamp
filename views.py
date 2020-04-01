@@ -22,6 +22,7 @@ if __name__ == "__main__":
         elif commands[0] == "CLA": 
             # Create an empty lamp array with ID
             lamp_id = commands[1]
+            controller.add_LampArray(lamp_id)
         elif commands[0] == "ALA":
             # Add lamp to array
             lamp_id = commands[1]
