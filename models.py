@@ -12,9 +12,9 @@ class Lamp:
         self.state = False
 
 class ColorLamp(Lamp):
-    def __init__(self, color):
+    def __init__(self):
         Lamp.__init__(self)
-        self.color = color
+        self.color = 'white'
 
     def set_color(self, color):
         self.color = color
