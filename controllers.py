@@ -2,16 +2,31 @@ from models import Lamp
 
 class LampController:
     def __init__(self):
-        self.lamp = Lamp()
+        self.lamps = []
 
-    def set_on(self):
+    def add_lamp(self, id, lamp):
+        dic = {
+            'id' : id,
+            'lamp' : lamp
+        }
+
+        self.lamps.append(dic)
+
+    def set_on(self, id):
         # Change lamp status to ON
-        self.lamp.set_on()
+        for lamp in self.lamps:
+            if lamp['id'] == id:
+                lamp['lamp'].set_on()
 
-    def set_off(self):
+    def set_off(self, id):
         # Change lamp status to OFF
-        self.lamp.set_off()
+        for lamp in self.lamps:
+            if lamp['id'] == id:
+                lamp['lamp'].set_off()
         
-    def get_status(self):
+    def get_status(self, id):
         # Returns True if lamp is ON
-        return self.lamp.is_on()
+        for lamp in self.lamps:
+            if lamp['id'] == id:
+                return lamp['lamp'].get_status()
+        
