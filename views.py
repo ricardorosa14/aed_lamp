@@ -38,4 +38,4 @@ if __name__ == "__main__":
             # Set ID off
             lamp_id = commands[1]
         else:
-            print("Invalid command.")  
+            print("Invalid command.") 
