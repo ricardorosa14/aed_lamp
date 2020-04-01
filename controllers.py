@@ -1,16 +1,35 @@
 from models import Lamp
+from models import ColorLamp
+from models import LampArray
 
 class LampController:
     def __init__(self):
         self.lamps = []
 
-    def add_lamp(self, id, lamp):
+    def add_lamp(self, id):
+        lamp = Lamp()
         dic = {
             'id' : id,
             'lamp' : lamp
         }
-
         self.lamps.append(dic)
+    
+    def add_ColorLamp(self, id, color):
+        lamp = ColorLamp(color)
+        dic = {
+            'id' : id,
+            'lamp' : lamp
+        }
+        self.lamps.append(dic)
+
+    def add_LampArray(self, id):
+        lamp = LampArray()
+        dic = {
+            'id' : id,
+            'lamp' : lamp
+        }
+        self.lamps.append(dic)
+
 
     def set_on(self, id):
         # Change lamp status to ON
