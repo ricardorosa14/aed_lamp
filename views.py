@@ -18,3 +18,6 @@ if __name__ == "__main__":
         if line == "STATUS":
             # Mostra estado da lampada
             pass
+        if line == "CREATE":
+            lamp = LampController()
+            
