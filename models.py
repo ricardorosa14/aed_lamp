@@ -32,7 +32,6 @@ class LampArray():
     def set_all_on(self):
         for lamp in self.lamps:
             lamp.set_on()
-
     
     def set_all_off(self):
         for lamp in self.lamps:
