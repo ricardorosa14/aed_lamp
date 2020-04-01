@@ -8,16 +8,36 @@ if __name__ == "__main__":
         if line == "":
             exit(0)
         
-        if line == "ON":
-            # Liga a lampada
-            #controller.set_on()
-            print("Lamp status set to ON.")
-        if line == "OFF":
-            # Desliga a lampada
-            pass
-        if line == "STATUS":
-            # Mostra estado da lampada
-            pass
-        if line == "CREATE":
-            lamp = LampController()
-            
+        commands = line.split("")
+        
+        if commands[0] == "CL":
+            # Create simple lamp with ID
+            lamp_id = commands[1]
+            controller.add_lamp(lamp_id)
+        elif commands[0] == "CCL":
+            # Create color lamp with ID
+            lamp_color = commands[1]
+            lamp_id = commands[2]
+            controller.add_ColorLamp(lamp_id, lamp_color)
+        elif commands[0] == "CLA": 
+            # Create an empty lamp array with ID
+            lamp_id = commands[1]
+        elif commands[0] == "ALA":
+            # Add lamp to array
+            lamp_id = commands[1]
+            lamp_array_id = commands[2]
+        elif commands[0] == "RLA":
+            # Remove lamp from array
+            lamp_id = commands[1]
+            lamp_array_id = commands[2]
+        elif commands[0] == "S":
+            # Get state of ID
+            lamp_id = commands[1]
+        elif commands[0] == "ON":
+            # Set ID on
+            lamp_id = commands[1]
+        elif commands[0] == "OFF":
+            # Set ID off
+            lamp_id = commands[1]
+        else:
+            print("Invalid command.")  
