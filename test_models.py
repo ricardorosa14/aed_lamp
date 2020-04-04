@@ -4,7 +4,7 @@ from models import LampArray
 
 class TestColorLamp(unittest.TestCase):
     def setUp(self):
-        self.lamp = ColorLamp()
+        self.lamp = ColorLamp('white')
 
     def test_set_color(self):
         self.lamp.set_color('Red')
