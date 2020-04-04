@@ -14,12 +14,6 @@ class TestColorLamp(unittest.TestCase):
 
 class TestLampArray(unittest.TestCase):
     def setUp(self):
-        self.controller = LampArray()
-
-    def test_all_on(self):
-        pass
-
-    def test_all_off(self):
         pass
 
 if __name__ == "__main__":
