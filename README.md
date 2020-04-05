@@ -1,3 +1,5 @@
+![Tests](https://github.com/amgs/aed_lamp/workflows/Tests/badge.svg)
+
 # Lamp Project
 
 This document is written in Markdown.
