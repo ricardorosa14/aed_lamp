@@ -41,4 +41,4 @@ This document is written in Markdown.
 
 # Credits
 
-AED DCT UAL 2019/2020.
+AED DCT UAL &copy; 2019/2020.
