@@ -8,7 +8,7 @@ if __name__ == "__main__":
         if line == "":
             exit(0)
         
-        commands = line.split("")
+        commands = line.split(" ")
         
         if commands[0] == "CL":
             # Create simple lamp with ID
@@ -32,14 +32,18 @@ if __name__ == "__main__":
             # Remove lamp from array
             lamp_id = commands[1]
             lamp_array_id = commands[2]
+            controller.remove_lamp(lamp_id, lamp_array_id)
         elif commands[0] == "S":
             # Get state of ID
             lamp_id = commands[1]
+            print(controller.get_status(lamp_id))
         elif commands[0] == "ON":
             # Set ID on
             lamp_id = commands[1]
+            controller.set_on(lamp_id)
         elif commands[0] == "OFF":
             # Set ID off
             lamp_id = commands[1]
+            controller.set_off(lamp_id)
         else:
             print("Invalid command.") 
