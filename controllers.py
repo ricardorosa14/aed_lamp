@@ -72,3 +72,14 @@ class LampController:
         for lamp in self.lamps:
             if lamp['ID'] == id:
                 return lamp['lamp'].get_list()
+
+    
+    def in_array(self, id):
+        result = False
+        for lamp in self.lamps:
+            if type(lamp['lamp']) == LampArray:
+                if lamp['lamp'].in_list(id):
+                    return True
+                
+        return result
+    
