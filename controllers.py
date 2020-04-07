@@ -35,7 +35,14 @@ class LampController:
             if lamp['ID'] == lamp_array_id:
                 for new_lamp in self.lamps:
                     if new_lamp['ID'] == lamp_id:
-                        lamp.append(new_lamp)
+                        lamp['lamp'].add_lamp(new_lamp)
+                        
+    def remove_lamp(self, lamp_id, lamp_array_id):
+        for lamp in self.lamps:
+            if lamp['ID'] == lamp_array_id:
+                for lamp_to_remove in self.lamps:
+                    if lamp_to_remove['ID'] == lamp_id:
+                        lamp['lamp'].remove_lamp(lamp_to_remove)
 
 
     def set_on(self, id):
@@ -55,5 +62,13 @@ class LampController:
         for lamp in self.lamps:
             if lamp['ID'] == id:
                 return lamp['lamp'].is_on()
-        
-        
+
+    def get_lamp(self, id):
+        for lamp in self.lamps:
+            if lamp['ID'] == id:
+                return lamp['lamp']
+    
+    def get_list(self, id):
+        for lamp in self.lamps:
+            if lamp['ID'] == id:
+                return lamp['lamp'].get_list()
