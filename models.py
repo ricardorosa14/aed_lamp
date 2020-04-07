@@ -29,24 +29,23 @@ class LampArray():
     def add_lamp(self, lamp):
         self.lamps.append(lamp)
 
-    def set_all_on(self):
-        for lamp in self.lamps:
-            lamp.set_on()
-    
-    def set_all_off(self):
-        for lamp in self.lamps:
-            lamp.set_off()
+    def remove_lamp(self, lamp):
+        self.lamps.remove(lamp)
 
-    def check_all_on(self):
+    def set_on(self):
         for lamp in self.lamps:
-            if lamp.is_on() == False:
+            lamp['lamp'].set_on()
+    
+    def set_off(self):
+        for lamp in self.lamps:
+            lamp['lamp'].set_off()
+
+    def is_on(self):
+        for lamp in self.lamps:
+            if lamp['lamp'].is_on() == False:
                 return False
 
         return True
-    
-    def check_all_off(self):
-        for lamp in self.lamps:
-            if lamp.is_on() == True:
-                return False
 
-        return True            
+    def get_list(self):
+        return self.lamps
