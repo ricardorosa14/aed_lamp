@@ -29,5 +29,12 @@ class TestLampController(unittest.TestCase):
         self.controller.remove_lamp(1, 4)
         self.assertEqual(lista, self.controller.get_list(4))
 
+    def test_in_array(self):
+        self.controller.add_lamp(1, 4)
+        self.assertTrue(self.controller.in_array(1))
+        self.assertFalse(self.controller.in_array(2))
+        self.controller.remove_lamp(1, 4)
+        self.assertFalse(self.controller.in_array(1))
+
 if __name__ == "__main__":
     unittest.main()
