@@ -49,3 +49,14 @@ class LampArray():
 
     def get_list(self):
         return self.lamps
+
+    def in_list(self, id):
+        if len(self.lamps) == 0:
+            return False
+
+        for lamp in self.lamps:
+            if lamp['ID'] == id:
+                return True
+
+        return False
+    
